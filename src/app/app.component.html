@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="logo">
+
+    <img src="https://img.icons8.com/external-anggara-flat-anggara-putra/64/external-chatting-bubble-chat-anggara-flat-anggara-putra-9.png" alt="WhatsApp logo" style="height: 100px; width: 100px">
+    <br/>
+    <br/>
+    <h1>WhatsApp Instant Chat</h1>
+    <h3>Initiate a chat on WhatsApp without the need to save the contact</h3>
+  </div>
+  <div class="input-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Country Code</mat-label>
+      <select matNativeControl id="countryCode">
+        <option *ngFor="let country of countryCodes" [value]="country.dial_code">
+          {{ country.name }} ({{ country.dial_code }})
+        </option>
+      </select>
+    </mat-form-field>
+  </div>
+  <div class="input-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Phone Number</mat-label>
+      <input matInput type="text" id="phoneNumber" placeholder="Enter your phone number">
+    </mat-form-field>
+  </div>
+  <button mat-raised-button style="color: rgb(255, 255, 255); background-color: blueviolet;" (click)="openWhatsApp()">Start Chat</button>
+</div>
+
